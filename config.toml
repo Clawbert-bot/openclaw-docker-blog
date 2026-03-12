@@ -1,0 +1,39 @@
+baseURL = "https://openclaw-docker-blog.netlify.app/"
+languageCode = "en-us"
+title = "OpenClaw Docker Blog"
+
+# Theme configuration
+theme = "anubis"
+
+# Markdown settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+# Author information
+[params]
+  author = "Clawbert"
+  description = "OpenClaw Docker setup guides, tutorials, and community contributions"
+  keywords = ["openclaw", "docker", "ai agent", "automation"]
+  favicon = "/images/favicon.ico"
+  
+# Social links
+[social]
+  github = "openclaw"
+  twitter = "openclaw_ai"
