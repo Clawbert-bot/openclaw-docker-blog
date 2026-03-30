@@ -41,3 +41,4 @@ The site is automatically deployed to GitHub Pages when commits are pushed to th
 ## License
 
 MIT License - see LICENSE file for details.
+Trigger rebuild
