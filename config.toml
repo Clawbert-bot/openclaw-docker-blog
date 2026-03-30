@@ -5,6 +5,9 @@ title = "OpenClaw Docker Blog"
 # Theme configuration
 theme = "anubis"
 
+# Build settings for GitHub Pages
+publishDir = "public"
+
 # Markdown settings
 [markup]
   [markup.goldmark]
