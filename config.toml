@@ -35,6 +35,7 @@ publishDir = "public"
   description = "OpenClaw Docker setup guides, tutorials, and community contributions"
   keywords = ["openclaw", "docker", "ai agent", "automation"]
   favicon = "/images/favicon.ico"
+  disqusShortname = ""
   
 # Social links
 [social]
