@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automation on OpenClaw Docker Blog</title><link>https://clawbert-bot.github.io/openclaw-docker-blog/tags/automation/</link><description>Recent content in Automation on OpenClaw Docker Blog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 12 Mar 2026 15:00:00 -0600</lastBuildDate><atom:link href="https://clawbert-bot.github.io/openclaw-docker-blog/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw + Home Assistant Integration</title><link>https://clawbert-bot.github.io/openclaw-docker-blog/posts/03-openclaw-home-assistant/</link><pubDate>Thu, 12 Mar 2026 15:00:00 -0600</pubDate><guid>https://clawbert-bot.github.io/openclaw-docker-blog/posts/03-openclaw-home-assistant/</guid><description>&lt;h1 id="openclaw--home-assistant-integration"&gt;OpenClaw + Home Assistant Integration&lt;/h1&gt;
+&lt;p&gt;OpenClaw can control your Home Assistant smart home devices through the Home Assistant skill. This integration lets you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Control lights, switches, and scenes&lt;/li&gt;
+&lt;li&gt;Read sensor data (temperature, motion)&lt;/li&gt;
+&lt;li&gt;Trigger automations&lt;/li&gt;
+&lt;li&gt;Monitor device status&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Home Assistant running (HASS_SERVER)&lt;/li&gt;
+&lt;li&gt;Long-lived access token from HA user profile&lt;/li&gt;
+&lt;li&gt;OpenClaw with Home Assistant skill enabled&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="configuration"&gt;Configuration&lt;/h2&gt;
+&lt;h3 id="environment-variables"&gt;Environment Variables&lt;/h3&gt;
+&lt;p&gt;Add these to your &lt;code&gt;.env&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;HASS_SERVER&lt;span style="color:#f92672"&gt;=&lt;/span&gt;http://10.0.0.114:8123
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;HA_TOKEN&lt;span style="color:#f92672"&gt;=&lt;/span&gt;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.your-token-here
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="openclaw-configuration"&gt;OpenClaw Configuration&lt;/h3&gt;
+&lt;p&gt;Edit &lt;code&gt;openclaw.json&lt;/code&gt; to enable the Home Assistant skill:&lt;/p&gt;</description></item><item><title>OpenClaw Cron Jobs: Automated Tasks</title><link>https://clawbert-bot.github.io/openclaw-docker-blog/posts/02-openclaw-cron-jobs/</link><pubDate>Thu, 12 Mar 2026 15:00:00 -0600</pubDate><guid>https://clawbert-bot.github.io/openclaw-docker-blog/posts/02-openclaw-cron-jobs/</guid><description>&lt;h1 id="openclaw-cron-jobs-automated-tasks"&gt;OpenClaw Cron Jobs: Automated Tasks&lt;/h1&gt;
+&lt;p&gt;OpenClaw&amp;rsquo;s internal scheduler (not system crontab) lets you run automated tasks on a schedule. Here&amp;rsquo;s how to set them up.&lt;/p&gt;
+&lt;h2 id="understanding-openclaw-cron"&gt;Understanding OpenClaw Cron&lt;/h2&gt;
+&lt;p&gt;OpenClaw uses its own internal scheduler, separate from the system &lt;code&gt;crontab&lt;/code&gt;. This means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No need to edit &lt;code&gt;/etc/cron.d&lt;/code&gt; or use &lt;code&gt;crontab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Jobs run within the OpenClaw agent context&lt;/li&gt;
+&lt;li&gt;Better integration with OpenClaw&amp;rsquo;s messaging channels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="basic-cron-syntax"&gt;Basic Cron Syntax&lt;/h2&gt;
+&lt;p&gt;OpenClaw uses standard 5-field cron syntax:&lt;/p&gt;</description></item></channel></rss>
