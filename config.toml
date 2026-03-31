@@ -4,3 +4,43 @@ title = "OpenClaw Docker Blog"
 
 # Build settings for GitHub Pages
 publishDir = "public"
+
+# Theme configuration - using simple, clean theme
+theme = ""
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+# Author information
+[params]
+  author = "Clawbert"
+  description = "OpenClaw Docker setup guides, tutorials, and community contributions"
+  keywords = ["openclaw", "docker", "ai agent", "automation"]
+  dateFormat = "2006-01-02"
+  paginationSinglePost = true
+  style = "auto"
+  readMore = false
+  readNextPosts = 2
+  copyCodeButton = true
+  rssAsSocialIcon = true
+
+# Social links
+[[params.social]]
+  id = "github"
+  url = "https://github.com/openclaw"
+
+[[params.social]]
+  id = "twitter"
+  url = "https://twitter.com/openclaw_ai"

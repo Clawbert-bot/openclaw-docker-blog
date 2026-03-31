@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem 0;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+    nav {
+      margin-bottom: 2rem;
+    }
+    nav a {
+      color: #3498db;
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .post-list {
+      list-style: none;
+    }
+    .post-item {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .post-item h2 {
+      margin-bottom: 0.75rem;
+      color: #2c3e50;
+    }
+    .post-item h2 a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+    .post-item h2 a:hover {
+      color: #3498db;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .post-excerpt {
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem 0;
+      border-top: 1px solid #e9ecef;
+    }
+    footer p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>{{ .Site.Title }}</h1>
+      <p>{{ .Site.Params.description }}</p>
+    </header>
+    
+    <nav>
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+
+    <main>
+      <h2>{{ .Title }}</h2>
+      {{ if .Content }}
+      <div class="post-content">{{ .Content }}</div>
+      {{ end }}
+
+      {{ if eq .Kind "term" }}
+      <ul class="post-list">
+        {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+      {{ else if eq .Kind "taxonomy" }}
+      <p>Posts in this category:</p>
+      {{ end }}
+
+      <ul class="post-list">
+        {{ range .Pages }}
+        <li class="post-item">
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
+          <p class="post-excerpt">{{ .Summary | plainify }}</p>
+          <a href="{{ .Permalink }}" style="color: #3498db; font-weight: 500;">Read more →</a>
+        </li>
+        {{ end }}
+      </ul>
+    </main>
+
+    <footer>
+      <p>© {{ now.Year }} {{ .Site.Title }}</p>
+      <p><a href='{{ .Site.BaseURL }}index.xml'>RSS Feed</a></p>
+    </footer>
+  </div>
+</body>
+</html>
