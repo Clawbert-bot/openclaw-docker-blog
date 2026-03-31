@@ -4,3 +4,7 @@ title = "OpenClaw Docker Blog"
 
 # Build settings for GitHub Pages
 publishDir = "public"
+
+[services]
+  [services.disqus]
+    shortname = ""
