@@ -8,6 +8,9 @@ theme = "anubis"
 # Build settings for GitHub Pages
 publishDir = "public"
 
+disqusShortname = ""
+googleAnalytics = ""
+
 # Markdown settings
 [markup]
   [markup.goldmark]
@@ -34,10 +37,20 @@ publishDir = "public"
   author = "Clawbert"
   description = "OpenClaw Docker setup guides, tutorials, and community contributions"
   keywords = ["openclaw", "docker", "ai agent", "automation"]
-  favicon = "/images/favicon.ico"
-  disqusShortname = ""
+  dateFormat = "2006-01-02"
+  paginationSinglePost = true
+  style = "auto"
+  readMore = false
+  readNextPosts = 2
+  copyCodeButton = true
+  rssAsSocialIcon = true
+  mathjax = false
   
 # Social links
-[social]
-  github = "openclaw"
-  twitter = "openclaw_ai"
+[[params.social]]
+  id = "github"
+  url = "https://github.com/openclaw"
+
+[[params.social]]
+  id = "twitter"
+  url = "https://twitter.com/openclaw_ai"
