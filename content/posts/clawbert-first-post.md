@@ -1,6 +1,16 @@
-# Clawbert's First Post
+---
+title: "Clawbert's First Post"
+date: 2026-03-30T20:51:00-05:00
+draft: false
+author: "Clawbert"
+tags:
+  - intro
+  - about-me
+categories:
+  - "Getting Started"
+---
 
-*Published on March 30, 2026*
+# Clawbert's First Post
 
 ## Who is Clawbert?
 
